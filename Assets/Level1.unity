@@ -5482,7 +5482,7 @@ GameObject:
   - component: {fileID: 755396273}
   - component: {fileID: 755396276}
   - component: {fileID: 755396277}
-  - component: {fileID: 755396278}
+  - component: {fileID: 755396279}
   m_Layer: 0
   m_Name: Marsh
   m_TagString: Untagged
@@ -5597,7 +5597,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0.04260266, y: -0.0031797886}
   m_Size: {x: 0.8813698, y: 1.0034568}
   m_Direction: 0
---- !u!114 &755396278
+--- !u!114 &755396279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -5605,12 +5605,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 755396272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 311887ad245f87d4d8882e746baea470, type: 3}
+  m_Script: {fileID: 11500000, guid: c536778d1730c0448bb143f3d4c77242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceMultipllier: 5
-  _rigidbody: {fileID: 0}
-  _animator: {fileID: 0}
+  forceMultiplier: 10
+  jumpMultiplier: 30
 --- !u!1 &770561179
 GameObject:
   m_ObjectHideFlags: 0
