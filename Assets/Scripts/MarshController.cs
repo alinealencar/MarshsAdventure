@@ -30,26 +30,39 @@ public class MarshController : MonoBehaviour {
 		} else if(_rigidbody.velocity.x > 0){
 			gameObject.transform.localScale = new Vector3 (1, 1, 1);
 		}
-
+			
 		//jump
 		float jump = Input.GetAxis("Jump");
-		if (jump > 0) {
+		if (jump > 0 && IsGrounded()) {
 			_rigidbody.AddForce (Vector2.up * jumpMultiplier);
 		}
+
+
+		//animation control
+		//run
+		_animator.SetInteger ("velocity",
+			(int)(Mathf.Abs(_rigidbody.velocity.x * 10000000))); 
+		
+		//jump
+		_animator.SetBool("jump", !IsGrounded());
+
+		
 	}
 
-	private bool isGrounded(){
+	private bool IsGrounded(){
 		SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer> ();
 		Vector2 pos = gameObject.transform.position;
 
+		//Marsh's jump boudary
 		RaycastHit2D res = Physics2D.Linecast (
-			new Vector2 (pos.x, pos.y - (sr.bounds.size.y / 2)),
-			new Vector2 (pos.x, pos.y - (sr.bounds.size.y / 2))
+			new Vector2 (pos.x, pos.y - (sr.bounds.size.y / 2)), //starting point
+			new Vector2 (pos.x, pos.y - (sr.bounds.size.y / 2 + 1.0f)) //ending point(how high he can jump)
 		);
 
+		//check the boundary
 		Debug.DrawLine (
 			new Vector2 (pos.x, pos.y - (sr.bounds.size.y / 2)),
-			new Vector2 (pos.x, pos.y - (sr.bounds.size.y / 2))
+			new Vector2 (pos.x, pos.y - (sr.bounds.size.y / 2 + 1.0f))
 		);	
 
 		return res != null && res.collider != null;
