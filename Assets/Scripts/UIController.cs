@@ -19,13 +19,14 @@ public class UIController : MonoBehaviour {
 
 		lifeLabel.gameObject.SetActive (true);
 		coinLabel.gameObject.SetActive (true);
+
 	}
 		
 
 	public void updateUI(){
 
-		coinLabel.text = "Coin: " + Player.Instance.Score;
-		lifeLabel.text = "Life: " + Player.Instance.Life;
+		coinLabel.text = "x " + Player.Instance.Score;
+		lifeLabel.text = "x " + Player.Instance.Life;
 	}
 
 	// Use this for initialization
@@ -38,4 +39,5 @@ public class UIController : MonoBehaviour {
 	void Update () {
 
 	}
+		
 }

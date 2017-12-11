@@ -24,21 +24,34 @@ public void OnTriggerEnter2D(Collider2D other){
 		other.gameObject.SetActive (false);
 		//add score
 		Player.Instance.Score += 1;
+		
+		//if number of coins is equal to 20, add 1 life
+		if (Player.Instance.Score.Equals(20)) {
+				Player.Instance.Life += 1;
+		}
 	}
 
-		//if Marsh collides with an enemy (saw or mace)
+	//if Marsh collides with an enemy (saw or mace)
 	 else if (other.gameObject.tag.Equals ("enemy")) {
 		Debug.Log ("Collision enemy\n");
 		//life is decreased
 		Player.Instance.Life -= 1;
-
+		
 		StartCoroutine( "Blink");
 	}
 
+	//if Marsh picks up a candy
+	else if (other.gameObject.tag.Equals ("candy")) {
+		Debug.Log ("Collision candy\n");
+		other.gameObject.SetActive (false);
+		//life is increased by 1
+		Player.Instance.Life += 1;
+		}
+
 }
 
+	//blink when player collides with an enemy
 	private IEnumerator Blink(){
-
 		Color c;
 		Renderer renderer = 
 			gameObject.GetComponent<Renderer> ();
