@@ -23,14 +23,14 @@ public void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("Collision coin\n");
 		other.gameObject.SetActive (false);
 		//add score
-		//Player.Instance.Score += 1;
+		Player.Instance.Score += 1;
 	}
 
 		//if Marsh collides with an enemy (saw or mace)
 	 else if (other.gameObject.tag.Equals ("enemy")) {
 		Debug.Log ("Collision enemy\n");
-		//score is decreased
-		//Player.Instance.Life -= 1;
+		//life is decreased
+		Player.Instance.Life -= 1;
 
 		StartCoroutine( "Blink");
 	}
@@ -42,7 +42,7 @@ public void OnTriggerEnter2D(Collider2D other){
 		Color c;
 		Renderer renderer = 
 			gameObject.GetComponent<Renderer> ();
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 1; i++) {
 			for (float f = 1f; f >= 0; f -= 0.1f) {
 				c = renderer.material.color;
 				c.a = f;
