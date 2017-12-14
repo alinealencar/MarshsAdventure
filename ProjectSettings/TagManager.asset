@@ -8,6 +8,7 @@ TagManager:
   - coin
   - enemy
   - candy
+  - dirt
   layers:
   - Default
   - TransparentFX

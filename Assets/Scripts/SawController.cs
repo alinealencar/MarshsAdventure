@@ -49,5 +49,14 @@ public class SawController : MonoBehaviour {
 		_rigidBody.velocity = vel;
 
 	}
+
+	public void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.tag.Equals ("dirt")) {
+			Vector3 curRot = _transform.eulerAngles;
+			curRot.y += 180;
+			_transform.eulerAngles = curRot;
+		}
+
+	}
 }
 
