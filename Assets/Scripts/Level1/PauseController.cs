@@ -6,9 +6,15 @@ using UnityEngine.EventSystems;
 
 public class PauseController : MonoBehaviour, IPointerClickHandler {
 	[SerializeField]
+	public Image pauseImage;
+	[SerializeField]
 	public Image continueImage;
 	[SerializeField]
-	public Image pauseImage;
+	public Image restartImage;
+	[SerializeField]
+	public Image cloudImage;
+	[SerializeField]
+	public Image exitImage;
 
 	public void OnPointerClick(PointerEventData eventData)
 	{
@@ -21,6 +27,9 @@ public class PauseController : MonoBehaviour, IPointerClickHandler {
 
 		//Show images
 		continueImage.gameObject.SetActive(true);
+		restartImage.gameObject.SetActive(true);
+		cloudImage.gameObject.SetActive(true);
+		exitImage.gameObject.SetActive(true);
 
 	}
 }

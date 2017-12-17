@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class StartController : MonoBehaviour, IPointerClickHandler {
 	public void OnPointerClick(PointerEventData eventData)
 	{
-		Debug.Log ("START");
 		SceneManager.LoadScene (1);
 	}
 }

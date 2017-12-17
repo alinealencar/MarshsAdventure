@@ -53,11 +53,13 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Level1\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Level1\ContinueController.cs" />
+     <Compile Include="Assets\Scripts\Level1\ExitController.cs" />
      <Compile Include="Assets\Scripts\Level1\KillZone.cs" />
      <Compile Include="Assets\Scripts\Level1\MarshCollision.cs" />
      <Compile Include="Assets\Scripts\Level1\MarshController.cs" />
      <Compile Include="Assets\Scripts\Level1\PauseController.cs" />
      <Compile Include="Assets\Scripts\Level1\Player.cs" />
+     <Compile Include="Assets\Scripts\Level1\RestartController.cs" />
      <Compile Include="Assets\Scripts\Level1\SawController.cs" />
      <Compile Include="Assets\Scripts\Level1\UIController.cs" />
      <Compile Include="Assets\Scripts\Start\StartController.cs" />

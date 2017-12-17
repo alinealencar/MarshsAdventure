@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -13,8 +12,15 @@ public class UIController : MonoBehaviour {
 	Text coinLabel;
 	[SerializeField]
 	public Image continueImage;
+	[SerializeField]
+	public Image restartImage;
+	[SerializeField]
+	public Image cloudImage;
+	[SerializeField]
+	public Image exitImage;
 
 	private void initialize(){
+		Time.timeScale = 1;
 
 		Player.Instance.Score = 0;
 		Player.Instance.Life = 4;
@@ -24,7 +30,9 @@ public class UIController : MonoBehaviour {
 
 		//Hide images
 		continueImage.gameObject.SetActive(false);
-
+		cloudImage.gameObject.SetActive (false);
+		restartImage.gameObject.SetActive (false);
+		exitImage.gameObject.SetActive (false);
 	}
 		
 
