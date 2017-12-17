@@ -22,6 +22,7 @@ public class MarshCollision : MonoBehaviour {
 		if (other.gameObject.tag.Equals ("coin")) {
 			Debug.Log ("Collision coin\n");
 			other.gameObject.SetActive (false);
+
 			//add score
 			Player.Instance.Score += 1;
 		
@@ -34,9 +35,10 @@ public class MarshCollision : MonoBehaviour {
 		//if Marsh collides with an enemy (saw or mace)
 		 else if (other.gameObject.tag.Equals ("enemy")) {
 			Debug.Log ("Collision enemy\n");
+
 			//life is decreased
 			Player.Instance.Life -= 1;
-		
+
 			StartCoroutine( "Blink");
 		}
 

@@ -18,6 +18,10 @@ public class UIController : MonoBehaviour {
 	public Image cloudImage;
 	[SerializeField]
 	public Image exitImage;
+	[SerializeField]
+	public Text gameOverLbl;
+	[SerializeField]
+	public Image pauseImage;
 
 	private void initialize(){
 		Time.timeScale = 1;
@@ -33,6 +37,7 @@ public class UIController : MonoBehaviour {
 		cloudImage.gameObject.SetActive (false);
 		restartImage.gameObject.SetActive (false);
 		exitImage.gameObject.SetActive (false);
+		gameOverLbl.gameObject.SetActive (false);
 	}
 		
 
@@ -40,6 +45,19 @@ public class UIController : MonoBehaviour {
 
 		coinLabel.text = "x " + Player.Instance.Score;
 		lifeLabel.text = "x " + Player.Instance.Life;
+	}
+
+	public void GameOver(){
+		//Show UI for game over
+		cloudImage.gameObject.SetActive (true);
+		restartImage.gameObject.SetActive (true);
+		exitImage.gameObject.SetActive (true);
+		gameOverLbl.gameObject.SetActive (true);
+		pauseImage.gameObject.SetActive (false);
+
+
+		//Pause the game
+		Time.timeScale = 0;
 	}
 
 	// Use this for initialization

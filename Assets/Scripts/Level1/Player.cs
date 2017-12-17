@@ -36,13 +36,10 @@ public class Player {
 		set{ 
 			life = value;
 
+			if (life <= 0)
+				uiCtrl.GameOver ();
 
-			if (life <= 0) {
-				//game over
-				
-			}else{
-				uiCtrl.updateUI();
+			uiCtrl.updateUI();
 			}
-		}
 	}
 }

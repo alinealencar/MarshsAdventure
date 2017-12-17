@@ -9,6 +9,7 @@ public class RestartController : MonoBehaviour, IPointerClickHandler {
 
 	public void OnPointerClick(PointerEventData eventData)
 	{
-		SceneManager.LoadScene (SceneManager.GetActiveScene().name);
+		//Load Level 1 whenever this button is clicked
+		SceneManager.LoadScene (1);
 	}
 }
