@@ -11,6 +11,8 @@ public class UIController : MonoBehaviour {
 	Text lifeLabel;
 	[SerializeField]
 	Text coinLabel;
+	[SerializeField]
+	public Image continueImage;
 
 	private void initialize(){
 
@@ -19,6 +21,9 @@ public class UIController : MonoBehaviour {
 
 		lifeLabel.gameObject.SetActive (true);
 		coinLabel.gameObject.SetActive (true);
+
+		//Hide images
+		continueImage.gameObject.SetActive(false);
 
 	}
 		
