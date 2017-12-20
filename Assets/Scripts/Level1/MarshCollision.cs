@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class MarshCollision : MonoBehaviour {
 
+	[SerializeField]
+	UIController uiController;
+
+	public AudioClip audioPoints;
+	public AudioClip audioEnemy;
+	public AudioClip audioLife;
 
 	// Use this for initialization
 	void Start () {
