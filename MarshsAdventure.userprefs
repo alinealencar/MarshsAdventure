@@ -5,8 +5,8 @@
       <File FileName="Assets\Scripts\Level1\ContinueController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Level1\UIController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Level1\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level1\MarshController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level1\MarshCollision.cs" Line="47" Column="4" />
+      <File FileName="Assets\Scripts\Level1\MarshController.cs" Line="6" Column="18" />
+      <File FileName="Assets\Scripts\Level1\MarshCollision.cs" Line="30" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

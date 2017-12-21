@@ -11,17 +11,6 @@ public class MarshCollision : MonoBehaviour {
 	public AudioClip audioEnemy;
 	public AudioClip audioLife;
 
-	// Use this for initialization
-	void Start () {
-
-
-}
-
-	// Update is called once per frame
-	void Update () {
-
-	}
-
 	public void OnTriggerEnter2D(Collider2D other){
 
 		//if Marsh picks up coins
@@ -29,11 +18,23 @@ public class MarshCollision : MonoBehaviour {
 			Debug.Log ("Collision coin\n");
 			other.gameObject.SetActive (false);
 
+			if (audioPoints != null) {
+				// points audio
+				AudioSource audio = GetComponent<AudioSource>();
+				audio.PlayOneShot (audioPoints);
+			}
+
 			//add score
 			Player.Instance.Score += 1;
 		
 			//if number of coins is equal to 20, add 1 life
 			if (Player.Instance.Score.Equals(20)) {
+				if (audioLife != null) {
+					// points audio
+					AudioSource audio = GetComponent<AudioSource>();
+					audio.PlayOneShot (audioLife);
+				}
+
 				Player.Instance.Life += 1;
 				Player.Instance.Score = 0;
 		}
@@ -41,7 +42,12 @@ public class MarshCollision : MonoBehaviour {
 		//if Marsh collides with an enemy (saw or mace)
 		 else if (other.gameObject.tag.Equals ("enemy")) {
 			Debug.Log ("Collision enemy\n");
-
+			// enemy audio
+			if (audioEnemy != null) {
+				// points audio
+				AudioSource audio = GetComponent<AudioSource>();
+				audio.PlayOneShot (audioEnemy);
+			}
 			//life is decreased
 			Player.Instance.Life -= 1;
 
@@ -52,6 +58,12 @@ public class MarshCollision : MonoBehaviour {
 		else if (other.gameObject.tag.Equals ("candy")) {
 			Debug.Log ("Collision candy\n");
 			other.gameObject.SetActive (false);
+			// enemy audio
+			if (audioLife != null) {
+				// points audio
+				AudioSource audio = GetComponent<AudioSource>();
+				audio.PlayOneShot (audioLife);
+			}
 			//life is increased by 1
 			Player.Instance.Life += 1;
 		}
