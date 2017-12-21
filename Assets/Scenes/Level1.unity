@@ -12287,7 +12287,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 941143658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.38, y: 0, z: -10}
+  m_LocalPosition: {x: -6.76, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12305,6 +12305,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 755396275}
+  startFollow: -6.5
+  endFollow: 101.76
 --- !u!82 &941143665
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26288,7 +26290,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4590431463275342, guid: ed9c509019123d7469e15a8a9414a9ec, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.97
+      value: -15.56
       objectReference: {fileID: 0}
     - target: {fileID: 4590431463275342, guid: ed9c509019123d7469e15a8a9414a9ec, type: 2}
       propertyPath: m_LocalPosition.y
@@ -26338,6 +26340,16 @@ Prefab:
       propertyPath: audioPoints
       value: 
       objectReference: {fileID: 8300000, guid: 6d871e642e52b734ea88c3c60c1b0b48, type: 3}
+    - target: {fileID: 114648696503730752, guid: ed9c509019123d7469e15a8a9414a9ec,
+        type: 2}
+      propertyPath: startX
+      value: -18.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 114648696503730752, guid: ed9c509019123d7469e15a8a9414a9ec,
+        type: 2}
+      propertyPath: endX
+      value: 113.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed9c509019123d7469e15a8a9414a9ec, type: 2}
   m_IsPrefabParent: 0
