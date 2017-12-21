@@ -7,15 +7,10 @@ public class MarshController : MonoBehaviour {
 	private float forceMultiplier = 1f;
 	[SerializeField]
 	private float jumpMultiplier = 30f;
-	[SerializeField]
-	private float startX; //-6.5
-	[SerializeField]
-	private float endX; //105
 
 
 	private Rigidbody2D _rigidbody = null;
 	private Animator _animator = null;
-	private Vector2 _currentPos;
 
 	// Use this for initialization
 	void Start () {
@@ -28,12 +23,6 @@ public class MarshController : MonoBehaviour {
 		//Marsh walkiing right and left
 		Vector2 forceVect = new Vector2 (Input.GetAxis ("Horizontal"), 0);
 		_rigidbody.AddForce (forceVect * forceMultiplier);
-
-		//set boundaries
-		_currentPos = _rigidbody.position;
-		Checkbounds ();
-		_rigidbody.position = _currentPos;
-		//Debug.Log (_rigidbody.transform.position.x);
 
 		//flip
 		if (_rigidbody.velocity.x < 0) {
@@ -78,18 +67,4 @@ public class MarshController : MonoBehaviour {
 
 		return res != null && res.collider != null;
 	}
-
-	//boundaries of Marsh
-	private void Checkbounds(){
-		//left boundary
-		if (_rigidbody.transform.position.x < startX) {
-			_currentPos.x = startX;
-		}
-		//right boundary
-		if(_rigidbody.transform.position.x > endX){
-			_currentPos.x = endX;
-		}
-	}
-
-
 }

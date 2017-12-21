@@ -5,10 +5,6 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour {
 	[SerializeField]
 	Transform target = null;
-	[SerializeField]
-	private float startX;
-	[SerializeField]
-	private float endX;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +19,4 @@ public class CameraFollow : MonoBehaviour {
 				gameObject.transform.position.z
 			);
 	}
-		
 }
-		

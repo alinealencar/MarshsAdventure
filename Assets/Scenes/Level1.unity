@@ -12264,7 +12264,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.317155
+  orthographic size: 5.324041
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -12287,7 +12287,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 941143658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.74, y: 0, z: -10}
+  m_LocalPosition: {x: -0.38, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12305,8 +12305,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 755396275}
-  startX: 0
-  endX: 0
 --- !u!82 &941143665
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26290,11 +26288,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4590431463275342, guid: ed9c509019123d7469e15a8a9414a9ec, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.01
+      value: -7.97
       objectReference: {fileID: 0}
     - target: {fileID: 4590431463275342, guid: ed9c509019123d7469e15a8a9414a9ec, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.4
+      value: 2.52
       objectReference: {fileID: 0}
     - target: {fileID: 4590431463275342, guid: ed9c509019123d7469e15a8a9414a9ec, type: 2}
       propertyPath: m_LocalPosition.z
@@ -26320,19 +26318,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 39
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 114648696503730752, guid: ed9c509019123d7469e15a8a9414a9ec,
-        type: 2}
-      propertyPath: startX
-      value: -6.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114648696503730752, guid: ed9c509019123d7469e15a8a9414a9ec,
-        type: 2}
-      propertyPath: endX
-      value: 105
-      objectReference: {fileID: 0}
-||||||| merged common ancestors
-=======
     - target: {fileID: 114847897909249816, guid: ed9c509019123d7469e15a8a9414a9ec,
         type: 2}
       propertyPath: uiController
@@ -26353,7 +26338,6 @@ Prefab:
       propertyPath: audioPoints
       value: 
       objectReference: {fileID: 8300000, guid: 6d871e642e52b734ea88c3c60c1b0b48, type: 3}
->>>>>>> f90f0bee8e94d0695cda8882ed0a5220fc4b3950
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed9c509019123d7469e15a8a9414a9ec, type: 2}
   m_IsPrefabParent: 0
