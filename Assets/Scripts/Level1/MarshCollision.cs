@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MarshCollision : MonoBehaviour {
 
@@ -37,8 +38,8 @@ public class MarshCollision : MonoBehaviour {
 
 				Player.Instance.Life += 1;
 				Player.Instance.Score = 0;
+			}
 		}
-	}
 		//if Marsh collides with an enemy (saw or mace)
 		 else if (other.gameObject.tag.Equals ("enemy")) {
 			Debug.Log ("Collision enemy\n");
@@ -68,26 +69,33 @@ public class MarshCollision : MonoBehaviour {
 			Player.Instance.Life += 1;
 		}
 
-}
+	}
 
-		//blink when player collides with an enemy
-		private IEnumerator Blink(){
-			Color c;
-			Renderer renderer = 
-			gameObject.GetComponent<Renderer> ();
-			for (int i = 0; i < 1; i++) {
-				for (float f = 1f; f >= 0; f -= 0.1f) {
-					c = renderer.material.color;
-					c.a = f;
-					renderer.material.color = c;
-					yield return new WaitForSeconds (.1f);
-				}
-				for (float f = 0f; f <= 1; f += 0.1f) {
-					c = renderer.material.color;
-					c.a = f;
-					renderer.material.color = c;
-					yield return new WaitForSeconds (.1f);
-				}
+	//blink when player collides with an enemy
+	private IEnumerator Blink(){
+		Color c;
+		Renderer renderer = 
+		gameObject.GetComponent<Renderer> ();
+		for (int i = 0; i < 1; i++) {
+			for (float f = 1f; f >= 0; f -= 0.1f) {
+				c = renderer.material.color;
+				c.a = f;
+				renderer.material.color = c;
+				yield return new WaitForSeconds (.1f);
+			}
+			for (float f = 0f; f <= 1; f += 0.1f) {
+				c = renderer.material.color;
+				c.a = f;
+				renderer.material.color = c;
+				yield return new WaitForSeconds (.1f);
 			}
 		}
+	}
+
+	//when Marsh collides the door goes to Level 2
+	private void OnTriggerStay2D(Collider2D other){
+		if (other.gameObject.name.Equals ("door")) {
+			SceneManager.LoadScene (2);
+		}
+	}
 }
