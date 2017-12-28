@@ -11,6 +11,11 @@ public class MarshCollision : MonoBehaviour {
 	public AudioClip audioPoints;
 	public AudioClip audioEnemy;
 	public AudioClip audioLife;
+	[SerializeField]
+	AudioClip audioCompleted;
+
+	private Transform _transform;
+	private Vector2 _currPos;
 
 	public void OnTriggerEnter2D(Collider2D other){
 
@@ -69,6 +74,15 @@ public class MarshCollision : MonoBehaviour {
 			Player.Instance.Life += 1;
 		}
 
+		//when Marsh reaches the door
+		if (other.gameObject.name.Equals ("door")) {
+			// game completed audio
+			AudioSource audio = GetComponent<AudioSource>();
+			audio.PlayOneShot (audioCompleted);
+			//pause and go to level 2
+			StartCoroutine("Wait");
+		}
+
 	}
 
 	//blink when player collides with an enemy
@@ -92,10 +106,12 @@ public class MarshCollision : MonoBehaviour {
 		}
 	}
 
-	//when Marsh collides the door goes to Level 2
-	private void OnTriggerStay2D(Collider2D other){
-		if (other.gameObject.name.Equals ("door")) {
-			SceneManager.LoadScene (2);
-		}
+	IEnumerator Wait()
+	{
+		//delay to move to level 2
+		yield return new WaitForSeconds(3);
+		//move to level 2
+		SceneManager.LoadScene (2);
 	}
+
 }
