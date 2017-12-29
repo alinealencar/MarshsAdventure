@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 492}
+  m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 54
+  controlID: 65
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,8 +64,8 @@ MonoBehaviour:
     y: 0
     width: 560
     height: 947
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -206,10 +206,10 @@ MonoBehaviour:
     y: 0
     width: 1360
     height: 947
-  m_MinSize: {x: 404, y: 492}
+  m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 80
+  controlID: 22
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,10 +230,10 @@ MonoBehaviour:
     y: 0
     width: 1360
     height: 620
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 81
+  controlID: 23
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,8 +252,8 @@ MonoBehaviour:
     y: 0
     width: 1158
     height: 620
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -325,19 +325,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Audio
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Audio
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\pilas\Desktop\SCHOOL\GAME DEVT\MarshsAdventure
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0a2d0000
-    m_LastClickedID: 11530
-    m_ExpandedIDs: 00000000262600002a260000822600009e260000c6270000ee2700006e2900004c2a0000942a00009a2a0000bc2a0000fa2a0000882b0000362c0000382c0000502c0000942c0000a02c0000de2c0000e22c0000082d00000a2d0000182d0000c4360000c6360000c8360000ca360000cc36000000ca9a3bffffff7f
+    m_SelectedIDs: 7a2c0000
+    m_LastClickedID: 11386
+    m_ExpandedIDs: 00000000262600002a260000822600009e260000c6270000ee270000702900004e2a0000962a00009c2a0000be2a0000fc2a00008a2b0000382c00003a2c0000522c0000942c0000a02c0000de2c0000e22c0000082d00000a2d0000182d0000a82d0000aa2d0000ac2d0000ae2d0000b02d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -365,7 +365,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000262600002a260000822600009e260000c6270000ee2700006e2900004c2a0000942a00009a2a0000bc2a0000fa2a0000882b0000362c0000382c0000502c0000942c0000a02c0000de2c0000e22c0000082d00000a2d0000182d0000c4360000c6360000c8360000ca360000cc360000
+    m_ExpandedIDs: 00000000262600002a260000822600009e260000c6270000ee270000702900004e2a0000962a00009c2a0000be2a0000fc2a00008a2b0000382c00003a2c0000522c0000942c0000a02c0000de2c0000e22c0000082d00000a2d0000182d0000a82d0000aa2d0000ac2d0000ae2d0000b02d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -419,7 +419,7 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
-  m_DirectoriesAreaWidth: 173
+  m_DirectoriesAreaWidth: 210
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -480,29 +480,29 @@ MonoBehaviour:
     width: 200
     height: 599
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 32}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 18fcffff00000000f82e0000ec2f0000
+    m_ExpandedIDs: 1c6ffaffe8eafaff0efdfaff0e32fbff4667fbff50b4fcffb899fdff32e5fdff34e5fdff84eafdffa215feff9a31feffd41dffff7a24ffffa2cbffffaadfffff34e1ffff0ee2ffffa4e9ffffceedffff3cefffff1afcffff00000000703a00002e4d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Dirt (6)
+      m_OriginalName: Dirt (6)
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -256152
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - Level1
+  - Level3
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -533,14 +533,14 @@ MonoBehaviour:
     width: 1154
     height: 599
   m_SceneLighting: 1
-  lastFramingTime: 0
+  lastFramingTime: 1420.3694207323563
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.1739652, y: 0.3360314, z: 0}
+    m_Target: {x: 70.25078, y: 0.50289106, z: 0}
     speed: 2
-    m_Value: {x: -2.1739652, y: 0.3360314, z: 0}
+    m_Value: {x: 70.25078, y: 0.50289106, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -567,9 +567,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 23.000753
+    m_Target: 28.160473
     speed: 2
-    m_Value: 23.000753
+    m_Value: 28.160473
   m_Ortho:
     m_Target: 1
     speed: 2
