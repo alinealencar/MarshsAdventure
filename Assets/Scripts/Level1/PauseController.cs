@@ -15,9 +15,15 @@ public class PauseController : MonoBehaviour, IPointerClickHandler {
 	public Image cloudImage;
 	[SerializeField]
 	public Image exitImage;
+	[SerializeField]
+	AudioSource backgroundMusic;
 
 	public void OnPointerClick(PointerEventData eventData)
 	{
+		//stop background music
+		backgroundMusic = GetComponent<AudioSource>();
+		backgroundMusic.Stop ();
+
 		//When click on pause, set the timeScale of the game to 0 
 		//(all animations stops and the player cannot move anymore)
 		Time.timeScale = 0;
