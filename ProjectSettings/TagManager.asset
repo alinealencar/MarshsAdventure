@@ -9,6 +9,7 @@ TagManager:
   - enemy
   - candy
   - dirt
+  - cloud
   layers:
   - Default
   - TransparentFX
