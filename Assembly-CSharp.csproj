@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Level1\RestartController.cs" />
      <Compile Include="Assets\Scripts\Level1\SawController.cs" />
      <Compile Include="Assets\Scripts\Level1\UIController.cs" />
+     <Compile Include="Assets\Scripts\Level3\CameraFollowLevel3.cs" />
      <Compile Include="Assets\Scripts\Level3\CloudController.cs" />
      <Compile Include="Assets\Scripts\Start\StartController.cs" />
      <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
