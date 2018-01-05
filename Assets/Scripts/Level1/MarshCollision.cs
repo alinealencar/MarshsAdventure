@@ -83,6 +83,14 @@ public class MarshCollision : MonoBehaviour {
 			StartCoroutine("Wait");
 		}
 
+		if (other.gameObject.name.Equals ("mallow")) {
+			// game completed audio
+			AudioSource audio = GetComponent<AudioSource>();
+			audio.PlayOneShot (audioCompleted);
+			//pause and go to level 2
+			StartCoroutine("End");
+		}
+
 	}
 
 	//blink when player collides with an enemy
@@ -112,6 +120,14 @@ public class MarshCollision : MonoBehaviour {
 		yield return new WaitForSeconds(3);
 		//move to level 2
 		SceneManager.LoadScene (2);
+	}
+
+	IEnumerator End()
+	{
+		//delay to move to level 2
+		yield return new WaitForSeconds(3);
+		//move to level 2
+		SceneManager.LoadScene (0);
 	}
 
 }

@@ -26,7 +26,7 @@ public class Player {
 		get{ return score; }
 		set{ 
 			score = value;
-			uiCtrl.updateUI();
+			uiCtrl.UpdateUI();
 		}
 
 	}
@@ -39,7 +39,7 @@ public class Player {
 			if (life <= 0)
 				uiCtrl.GameOver ();
 
-			uiCtrl.updateUI();
+			uiCtrl.UpdateUI();
 			}
 	}
 }

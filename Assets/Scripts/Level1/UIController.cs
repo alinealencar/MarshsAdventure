@@ -22,12 +22,22 @@ public class UIController : MonoBehaviour {
 	public Text gameOverLbl;
 	[SerializeField]
 	public Image pauseImage;
+	[SerializeField]
+	public GameObject clouds;
 
 	private void initialize(){
 		Time.timeScale = 1;
 
-		Player.Instance.Score = 0;
-		Player.Instance.Life = 4;
+		if (PlayerPrefs.GetInt ("lives") == 0 || SceneManager.GetActiveScene ().buildIndex != 3) {
+			//delete PlayerPrefs
+			PlayerPrefs.DeleteAll ();
+
+			Player.Instance.Score = 0;
+			Player.Instance.Life = 4;
+		} 
+		else
+			//set life to saved number of lives in PlayerPrefs
+			Player.Instance.Life = PlayerPrefs.GetInt ("lives");
 
 		lifeLabel.gameObject.SetActive (true);
 		coinLabel.gameObject.SetActive (true);
@@ -41,7 +51,7 @@ public class UIController : MonoBehaviour {
 	}
 		
 
-	public void updateUI(){
+	public void UpdateUI(){
 
 		coinLabel.text = "x " + Player.Instance.Score;
 		lifeLabel.text = "x " + Player.Instance.Life;

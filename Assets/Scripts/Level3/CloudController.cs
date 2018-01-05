@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CloudController : MonoBehaviour {
+
 	private Rigidbody2D _rigidbody;
 
 	void Start(){
-		_rigidbody = gameObject.GetComponent<Rigidbody2D> ();
-		this._rigidbody.gravityScale = 0.0f;
+	_rigidbody = gameObject.GetComponent<Rigidbody2D> ();
+	this._rigidbody.gravityScale = 0.0f;
+
 	}
 	public void OnCollisionEnter2D(Collision2D other){
 		
@@ -16,6 +18,7 @@ public class CloudController : MonoBehaviour {
 
 		}
 	}
+		
 
 	//fade when player steps on a cloud
 	private IEnumerator Fade(){
