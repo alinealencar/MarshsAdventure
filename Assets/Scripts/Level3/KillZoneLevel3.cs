@@ -32,11 +32,12 @@ public class KillZoneLevel3 : MonoBehaviour {
 		//get current score and save it to PlayerPrefs
 		PlayerPrefs.SetInt ("lives",Player.Instance.Life);
 		PlayerPrefs.Save ();
-			
+		//decrease one life when player falls
+		Player.Instance.Life--;
+
 		if (Player.Instance.Life > 0) {
 			SceneManager.LoadScene (sceneIndex);
-			//decrease one life when player falls
-			Player.Instance.Life--;
+			//uiCtrl.UpdateUI ();
 		}
 		else
 			uiCtrl.GameOver ();
