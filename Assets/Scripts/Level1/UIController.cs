@@ -29,9 +29,6 @@ public class UIController : MonoBehaviour {
 		Time.timeScale = 1;
 
 		if (PlayerPrefs.GetInt ("lives") == 0 || SceneManager.GetActiveScene ().buildIndex != 3) {
-			//delete PlayerPrefs
-			PlayerPrefs.DeleteAll ();
-
 			Player.Instance.Score = 0;
 			Player.Instance.Life = 4;
 		} 
