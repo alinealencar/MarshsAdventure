@@ -19120,6 +19120,7 @@ MonoBehaviour:
   exitImage: {fileID: 2014841359}
   gameOverLbl: {fileID: 15611276}
   pauseImage: {fileID: 1451396601}
+  clouds: {fileID: 0}
 --- !u!1 &1568995828
 GameObject:
   m_ObjectHideFlags: 0

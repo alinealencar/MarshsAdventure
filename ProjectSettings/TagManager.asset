@@ -11,6 +11,7 @@ TagManager:
   - dirt
   - cloud
   - mallow
+  - water
   layers:
   - Default
   - TransparentFX
