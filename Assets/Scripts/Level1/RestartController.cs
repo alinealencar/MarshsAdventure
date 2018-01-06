@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 
 public class RestartController : MonoBehaviour, IPointerClickHandler {
 	private int sceneIndex;
+
+	public UIController uiCtrl;
+
 	void Awake(){
 		//get Active scene index
 		sceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -18,6 +21,13 @@ public class RestartController : MonoBehaviour, IPointerClickHandler {
 	{
 		//Load active scene whenever this button is clicked
 		//means back to the begining of the active scene
-		SceneManager.LoadScene (sceneIndex);
+		if (SceneManager.GetActiveScene ().buildIndex == 3) {
+			Player.Instance.Score = 0;
+			Player.Instance.Life = 4;
+			SceneManager.LoadScene (sceneIndex);
+			uiCtrl.UpdateUI ();
+		}
+		else
+			SceneManager.LoadScene (sceneIndex);
 	}
 }

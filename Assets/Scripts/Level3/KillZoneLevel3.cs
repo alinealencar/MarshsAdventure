@@ -38,7 +38,6 @@ public class KillZoneLevel3 : MonoBehaviour {
 
 		if (Player.Instance.Life > 0) {
 			SceneManager.LoadScene (sceneIndex);
-			//uiCtrl.UpdateUI ();
 		}
 		else
 			uiCtrl.GameOver ();
