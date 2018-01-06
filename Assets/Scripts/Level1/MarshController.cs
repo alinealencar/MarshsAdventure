@@ -25,7 +25,7 @@ public class MarshController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		//Marsh walkiing right and left
+		//Marsh walking right and left
 		Vector2 forceVect = new Vector2 (Input.GetAxis ("Horizontal"), 0);
 		_rigidbody.AddForce (forceVect * forceMultiplier);
 

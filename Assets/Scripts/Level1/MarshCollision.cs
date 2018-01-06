@@ -11,6 +11,7 @@ public class MarshCollision : MonoBehaviour {
 	public AudioClip audioPoints;
 	public AudioClip audioEnemy;
 	public AudioClip audioLife;
+	public AudioClip audioWater;
 	[SerializeField]
 	AudioClip audioCompleted;
 
@@ -46,11 +47,11 @@ public class MarshCollision : MonoBehaviour {
 			}
 		}
 		//if Marsh collides with an enemy (saw or mace)
-		 else if (other.gameObject.tag.Equals ("enemy")) {
+		else if (other.gameObject.tag.Equals ("enemy")) {
 			Debug.Log ("Collision enemy\n");
 			// enemy audio
 			if (audioEnemy != null) {
-				// points audio
+				// plays audio
 				AudioSource audio = GetComponent<AudioSource>();
 				audio.PlayOneShot (audioEnemy);
 			}
@@ -60,13 +61,29 @@ public class MarshCollision : MonoBehaviour {
 			StartCoroutine( "Blink");
 		}
 
+		//if Marsh collides with water
+		else if(other.gameObject.tag.Equals("water")){
+			Debug.Log ("Collision water\n");
+			//water audio
+			if(audioWater != null){
+				//plays audio
+				AudioSource audio = GetComponent<AudioSource>();
+				audio.PlayOneShot(audioWater);
+			}
+			//life is decreased
+			Player.Instance.Life -= 1;
+
+			//Send Marsh to the beginning of the level
+
+		}
+
 		//if Marsh picks up a candy
 		else if (other.gameObject.tag.Equals ("candy")) {
 			Debug.Log ("Collision candy\n");
 			other.gameObject.SetActive (false);
 			// enemy audio
 			if (audioLife != null) {
-				// points audio
+				// plays audio
 				AudioSource audio = GetComponent<AudioSource>();
 				audio.PlayOneShot (audioLife);
 			}
