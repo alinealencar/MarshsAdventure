@@ -9,6 +9,10 @@ public class CameraFollow : MonoBehaviour {
 	float startFollow = -6.5f;
 	[SerializeField]
 	float endFollow = 101.76f;
+	[SerializeField]
+	float startCameraX = 0.2f;
+	[SerializeField]
+	float marshsFallY = -4.26f;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +28,16 @@ public class CameraFollow : MonoBehaviour {
 				target.position.x, 
 				gameObject.transform.position.y,
 				gameObject.transform.position.z
+			);
+		}
+
+		//If Marsh falls, make the camera go to the start of the level
+		if(target.position.y < marshsFallY){
+			gameObject.transform.position = 
+				new Vector3 (
+					startCameraX,
+					gameObject.transform.position.y,
+					gameObject.transform.position.z	
 			);
 		}
 	}

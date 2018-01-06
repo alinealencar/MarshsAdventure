@@ -14,7 +14,6 @@ public class KillZone : MonoBehaviour {
 		if (rb) {
 			rb.velocity = Vector2.zero;
 		}
-			
 	}
-	}
+}
 

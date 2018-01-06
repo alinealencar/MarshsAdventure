@@ -15,6 +15,9 @@ public class MarshCollision : MonoBehaviour {
 	[SerializeField]
 	AudioClip audioCompleted;
 
+	[SerializeField]
+	Transform spawnPoint = null;
+
 	private Transform _transform;
 	private Vector2 _currPos;
 
@@ -63,18 +66,16 @@ public class MarshCollision : MonoBehaviour {
 
 		//if Marsh collides with water
 		else if(other.gameObject.tag.Equals("water")){
-			Debug.Log ("Collision water\n");
+			Debug.Log ("Collision water\n" + other.name);
+	
 			//water audio
 			if(audioWater != null){
 				//plays audio
 				AudioSource audio = GetComponent<AudioSource>();
 				audio.PlayOneShot(audioWater);
 			}
-			//life is decreased
+			//life is decreased by 1
 			Player.Instance.Life -= 1;
-
-			//Send Marsh to the beginning of the level
-
 		}
 
 		//if Marsh picks up a candy
@@ -108,6 +109,12 @@ public class MarshCollision : MonoBehaviour {
 			StartCoroutine("End");
 		}
 
+	}
+
+	//Spawn Marsh to the beginning of the level
+	public void OnTriggerExit2D(Collider2D other){
+		if (other.tag.Equals ("water"))
+			transform.position = spawnPoint.position;
 	}
 
 	//blink when player collides with an enemy
