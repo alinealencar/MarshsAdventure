@@ -28,13 +28,13 @@ public class UIController : MonoBehaviour {
 	private void initialize(){
 		Time.timeScale = 1;
 
+		//if level is less than 2 set life to 4 and score to otherwise carry over score from last level
 		if (PlayerPrefs.GetInt ("lives") == 0|| SceneManager.GetActiveScene ().buildIndex < 2) {
 			Player.Instance.Score = 0;
 			Player.Instance.Life = 4;
 		} 
 		else
-			//set life to saved number of lives in PlayerPrefs
-			Player.Instance.Life = PlayerPrefs.GetInt ("lives");
+			Player.Instance.Life = Player.Instance.Life;
 
 		lifeLabel.gameObject.SetActive (true);
 		coinLabel.gameObject.SetActive (true);

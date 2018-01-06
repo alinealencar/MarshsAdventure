@@ -17,21 +17,12 @@ public class KillZoneLevel3 : MonoBehaviour {
 		sceneIndex = SceneManager.GetActiveScene().buildIndex;
 	}
 
-	void Update(){
-		//get current score and save it to PlayerPrefs
-		PlayerPrefs.SetInt ("lives",Player.Instance.Life);
-	}
-
 	public void OnCollisionEnter2D(Collision2D other){
 		other.transform.position = spawnPoint.position;
 		Rigidbody2D rb = other.gameObject.GetComponent<Rigidbody2D> ();
 		if (rb) {
 			rb.velocity = Vector2.zero;
-		}
-
-		//get current score and save it to PlayerPrefs
-		PlayerPrefs.SetInt ("lives",Player.Instance.Life);
-		PlayerPrefs.Save ();
+		}  
 
 		//decrease one life when player falls
 		Player.Instance.Life--;
