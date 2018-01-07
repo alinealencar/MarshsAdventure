@@ -115,6 +115,11 @@ public class MarshCollision : MonoBehaviour {
 	public void OnTriggerExit2D(Collider2D other){
 		if (other.tag.Equals ("water"))
 			transform.position = spawnPoint.position;
+		
+		Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D> ();
+		if (rb) {
+			rb.velocity = Vector2.zero;
+		}  
 	}
 
 	//blink when player collides with an enemy
