@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\Level1\RestartController.cs" />
      <Compile Include="Assets\Scripts\Level1\SawController.cs" />
      <Compile Include="Assets\Scripts\Level1\UIController.cs" />
+     <Compile Include="Assets\Scripts\Level2\MaceController.cs" />
      <Compile Include="Assets\Scripts\Level2\SawVerticalController.cs" />
      <Compile Include="Assets\Scripts\Level3\CloudController.cs" />
      <Compile Include="Assets\Scripts\Level3\KillZoneLevel3.cs" />

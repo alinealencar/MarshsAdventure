@@ -6,23 +6,23 @@ public class SawVerticalController : MonoBehaviour {
 	[SerializeField]
 	private float speed = 2f;
 	[SerializeField]
-	private float ceilingY = 2.0f;
+	private float ceilingY = 2.2f;
 
 
 	private Rigidbody2D _rigidBody;
 	private Transform _transform;
 
-	private float _width, _height;
+//	private float _width, _height;
 
 	// Use this for initialization
 	void Start () {
 
 		_rigidBody = gameObject.GetComponent<Rigidbody2D> ();
 		_transform = gameObject.transform;
-
-		SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer> ();
-		_width = sprite.bounds.extents.x;
-		_height = sprite.bounds.extents.y;
+//
+//		SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer> ();
+//		_width = sprite.bounds.extents.x;
+//		_height = sprite.bounds.extents.y;
 
 	}
 
@@ -45,7 +45,7 @@ public class SawVerticalController : MonoBehaviour {
 //			Debug.Log("nao esta grounded");
 //		}
 
-		if (gameObject.transform.position.y > 2.2) {
+		if (gameObject.transform.position.y > ceilingY) {
 			Vector3 curRot = _transform.eulerAngles;
 			curRot.x += 180;
 			_transform.eulerAngles = curRot;
