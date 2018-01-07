@@ -10,8 +10,6 @@ public class KillZoneLevel3 : MonoBehaviour {
 
 	private int sceneIndex;
 
-	public UIController uiCtrl;
-
 	void Awake(){
 		//get Active scene index
 		sceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -30,9 +28,7 @@ public class KillZoneLevel3 : MonoBehaviour {
 		if (Player.Instance.Life > 0) {
 			SceneManager.LoadScene (sceneIndex);
 		}
-		else
-			uiCtrl.GameOver ();
 
 	}
 
-	}
+}
