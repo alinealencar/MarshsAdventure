@@ -22,8 +22,6 @@ public class UIController : MonoBehaviour {
 	public Text gameOverLbl;
 	[SerializeField]
 	public Image pauseImage;
-	[SerializeField]
-	public GameObject clouds;
 
 	private void initialize(){
 		Time.timeScale = 1;
