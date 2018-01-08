@@ -38,7 +38,7 @@ public class MarshController : MonoBehaviour {
 
 		//flip
 		if (_rigidbody.velocity.x < 0) {
-			gameObject.transform.localScale = new Vector3 (-1, 1, 1);
+			gameObject.transform.localScale = new Vector3 (-1, 1, 1); 
 		} else if(_rigidbody.velocity.x > 0){
 			gameObject.transform.localScale = new Vector3 (1, 1, 1);
 		}

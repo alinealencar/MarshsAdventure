@@ -14,7 +14,8 @@ public class MarshCollision : MonoBehaviour {
 	public AudioClip audioWater;
 	[SerializeField]
 	AudioClip audioCompleted;
-
+	[SerializeField]
+	GameObject heart;
 	[SerializeField]
 	Transform spawnPoint = null;
 
@@ -97,7 +98,7 @@ public class MarshCollision : MonoBehaviour {
 			// game completed audio
 			AudioSource audio = GetComponent<AudioSource>();
 			audio.PlayOneShot (audioCompleted);
-			//pause and go to level 2
+			//pause and go to next level
 			StartCoroutine("Wait");
 		}
 
@@ -105,8 +106,13 @@ public class MarshCollision : MonoBehaviour {
 			// game completed audio
 			AudioSource audio = GetComponent<AudioSource>();
 			audio.PlayOneShot (audioCompleted);
-			//pause and go to level 2
-			StartCoroutine("End");
+			Instantiate (heart)
+				.GetComponent<Transform> ()
+				.position = other.gameObject
+					.GetComponent<Transform> ()
+					.position;
+			//pause and go to next level
+			StartCoroutine("Wait");
 		}
 
 	}
@@ -145,18 +151,12 @@ public class MarshCollision : MonoBehaviour {
 
 	IEnumerator Wait()
 	{
-		//delay to move to level 2
+		//delay to move to next level
 		yield return new WaitForSeconds(3);
-		//move to level 2
-		SceneManager.LoadScene (2);
+		//move to next level
+		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
-	IEnumerator End()
-	{
-		//delay to move to level 2
-		yield return new WaitForSeconds(3);
-		//move to level 2
-		SceneManager.LoadScene (0);
-	}
+
 
 }

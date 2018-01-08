@@ -8592,6 +8592,11 @@ Prefab:
       propertyPath: m_Name
       value: Mace (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 212123465282329016, guid: b2bbb9478ecdf42a98abf7e826f6c74a,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2bbb9478ecdf42a98abf7e826f6c74a, type: 2}
   m_IsPrefabParent: 0
@@ -9088,6 +9093,11 @@ Prefab:
     - target: {fileID: 1247402628618140, guid: b2bbb9478ecdf42a98abf7e826f6c74a, type: 2}
       propertyPath: m_Name
       value: Mace (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 212123465282329016, guid: b2bbb9478ecdf42a98abf7e826f6c74a,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2bbb9478ecdf42a98abf7e826f6c74a, type: 2}

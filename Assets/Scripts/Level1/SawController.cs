@@ -48,6 +48,7 @@ public class SawController : MonoBehaviour {
 		vel.x = _transform.right.x * speed;
 		_rigidBody.velocity = vel;
 
+
 	}
 
 	public void OnTriggerEnter2D(Collider2D other){

@@ -12,6 +12,7 @@ TagManager:
   - cloud
   - mallow
   - water
+  - door
   layers:
   - Default
   - TransparentFX
