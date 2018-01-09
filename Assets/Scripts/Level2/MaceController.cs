@@ -33,7 +33,6 @@ public class MaceController : MonoBehaviour {
 			curRot.x += 180;
 			_transform.eulerAngles = curRot;
 			isUp = false;
-			Debug.Log ("bateu no ceiling");
 		}
 
 		Vector2 vel = _rigidBody.velocity;
@@ -54,7 +53,6 @@ public class MaceController : MonoBehaviour {
 			Vector3 curRot = _transform.eulerAngles;
 			curRot.x += 180;
 			_transform.eulerAngles = curRot;
-			Debug.Log ("bateu no chao");
 			isUp = true;
 		}
 

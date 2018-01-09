@@ -18,11 +18,13 @@ public class MarshCollision : MonoBehaviour {
 	GameObject heart;
 	[SerializeField]
 	Transform spawnPoint = null;
+	private AudioSource[] allAudios;
 
 	private Transform _transform;
 	private Vector2 _currPos;
 
 	public void OnTriggerEnter2D(Collider2D other){
+		Debug.Log ("COLLIDED WITH: " + other.name);
 
 		//if Marsh picks up coins
 		if (other.gameObject.tag.Equals ("coin")) {
@@ -95,6 +97,8 @@ public class MarshCollision : MonoBehaviour {
 
 		//when Marsh reaches the door
 		if (other.gameObject.name.Equals ("door")) {
+			//stop all audio
+			StopAudio ();
 			// game completed audio
 			AudioSource audio = GetComponent<AudioSource>();
 			audio.PlayOneShot (audioCompleted);
@@ -103,6 +107,9 @@ public class MarshCollision : MonoBehaviour {
 		}
 
 		if (other.gameObject.name.Equals ("mallow")) {
+			//Stop all audios to play the game completed audio
+			StopAudio();
+
 			// game completed audio
 			AudioSource audio = GetComponent<AudioSource>();
 			audio.PlayOneShot (audioCompleted);
@@ -157,6 +164,11 @@ public class MarshCollision : MonoBehaviour {
 		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
-
+	private void StopAudio(){
+		allAudios = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+		foreach(AudioSource anAudio in allAudios) {
+			anAudio.Stop();
+		}
+	}
 
 }
