@@ -26471,6 +26471,11 @@ Prefab:
       propertyPath: audioCompleted
       value: 
       objectReference: {fileID: 8300000, guid: 824181355b0644ada8f340dc2f147176, type: 3}
+    - target: {fileID: 114648696503730752, guid: ed9c509019123d7469e15a8a9414a9ec,
+        type: 2}
+      propertyPath: forceMultiplier
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed9c509019123d7469e15a8a9414a9ec, type: 2}
   m_IsPrefabParent: 0
