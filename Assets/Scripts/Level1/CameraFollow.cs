@@ -6,9 +6,9 @@ public class CameraFollow : MonoBehaviour {
 	[SerializeField]
 	Transform target = null;
 	[SerializeField]
-	float startFollow = -6.5f;
+	float startFollow = 3.63f;
 	[SerializeField]
-	float endFollow = 101.76f;
+	float endFollow = 131.4f;
 	[SerializeField]
 	float startCameraX = 0.2f;
 	[SerializeField]

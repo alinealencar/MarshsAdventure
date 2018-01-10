@@ -2740,7 +2740,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 248029010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.88, y: 3.81, z: 0}
+  m_LocalPosition: {x: -4.17, y: 2.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5591,7 +5591,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -8570,6 +8570,11 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114143413338993304, guid: b2bbb9478ecdf42a98abf7e826f6c74a,
+        type: 2}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2bbb9478ecdf42a98abf7e826f6c74a, type: 2}
   m_IsPrefabParent: 0
@@ -8780,11 +8785,20 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 114143413338993304, guid: b2bbb9478ecdf42a98abf7e826f6c74a,
         type: 2}
       propertyPath: audioMace
       value: 
       objectReference: {fileID: 8300000, guid: c8677862719e441688678e6632161da9, type: 3}
+||||||| merged common ancestors
+=======
+    - target: {fileID: 114143413338993304, guid: b2bbb9478ecdf42a98abf7e826f6c74a,
+        type: 2}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+>>>>>>> 74c13671bade4b25cf8913bd57c6c3b1aa03d7d9
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2bbb9478ecdf42a98abf7e826f6c74a, type: 2}
   m_IsPrefabParent: 0
@@ -8858,7 +8872,13 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4590431463275342, guid: ed9c509019123d7469e15a8a9414a9ec, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD
       value: -6.4
+||||||| merged common ancestors
+      value: -4.1
+=======
+      value: 127.7
+>>>>>>> 74c13671bade4b25cf8913bd57c6c3b1aa03d7d9
       objectReference: {fileID: 0}
     - target: {fileID: 4590431463275342, guid: ed9c509019123d7469e15a8a9414a9ec, type: 2}
       propertyPath: m_LocalPosition.y
@@ -8891,12 +8911,12 @@ Prefab:
     - target: {fileID: 114648696503730752, guid: ed9c509019123d7469e15a8a9414a9ec,
         type: 2}
       propertyPath: startX
-      value: -9.05
+      value: -5.69
       objectReference: {fileID: 0}
     - target: {fileID: 114648696503730752, guid: ed9c509019123d7469e15a8a9414a9ec,
         type: 2}
       propertyPath: endX
-      value: 143.05
+      value: 142.4
       objectReference: {fileID: 0}
     - target: {fileID: 114847897909249816, guid: ed9c509019123d7469e15a8a9414a9ec,
         type: 2}
@@ -8931,7 +8951,12 @@ Prefab:
     - target: {fileID: 114648696503730752, guid: ed9c509019123d7469e15a8a9414a9ec,
         type: 2}
       propertyPath: forceMultiplier
-      value: 6
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 212555972240598050, guid: ed9c509019123d7469e15a8a9414a9ec,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed9c509019123d7469e15a8a9414a9ec, type: 2}
@@ -10533,7 +10558,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.309309
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -10556,7 +10581,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1430628039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7, y: -0.12, z: -10}
+  m_LocalPosition: {x: 126.8, y: -0.04, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10574,9 +10599,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 686341926}
-  startFollow: 2.8
-  endFollow: 131.4
-  startCameraX: 0.2
+  startFollow: 3.63
+  endFollow: 132.2
+  startCameraX: 3.63
   marshsFallY: -4.26
 --- !u!4 &1439060923 stripped
 Transform:
