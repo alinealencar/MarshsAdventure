@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MarshController : MonoBehaviour {
 	[SerializeField]
-	private float forceMultiplier = 1f;
+	private float forceMultiplier = 3f;
 	[SerializeField]
 	private float jumpMultiplier = 30f;
 	[SerializeField]

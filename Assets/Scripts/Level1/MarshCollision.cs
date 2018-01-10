@@ -24,8 +24,6 @@ public class MarshCollision : MonoBehaviour {
 	private Vector2 _currPos;
 
 	public void OnTriggerEnter2D(Collider2D other){
-		Debug.Log ("COLLIDED WITH: " + other.name);
-
 		//if Marsh picks up coins
 		if (other.gameObject.tag.Equals ("coin")) {
 			Debug.Log ("Collision coin\n");
@@ -69,7 +67,7 @@ public class MarshCollision : MonoBehaviour {
 
 		//if Marsh collides with water
 		else if(other.gameObject.tag.Equals("water")){
-			Debug.Log ("Collision water\n" + other.name);
+			Debug.Log ("Collision water\n");
 	
 			//water audio
 			if(audioWater != null){
@@ -77,6 +75,7 @@ public class MarshCollision : MonoBehaviour {
 				AudioSource audio = GetComponent<AudioSource>();
 				audio.PlayOneShot(audioWater);
 			}
+
 			//life is decreased by 1
 			Player.Instance.Life -= 1;
 		}

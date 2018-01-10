@@ -8,6 +8,8 @@ public class MaceController : MonoBehaviour {
 	[SerializeField]
 	private float ceilingY = 2.4f;
 	private bool isUp = false;
+	[SerializeField]
+	public AudioClip audioMace;
 
 
 	private Rigidbody2D _rigidBody;
@@ -54,6 +56,15 @@ public class MaceController : MonoBehaviour {
 			curRot.x += 180;
 			_transform.eulerAngles = curRot;
 			isUp = true;
+
+			//when Mace collide the ground, make noise
+			if (audioMace != null) {
+				// points audio
+				AudioSource audio = GetComponent<AudioSource>();
+				audio.volume = 1.0F;
+				audio.PlayOneShot (audioMace);
+			}
+
 		}
 
 	}
