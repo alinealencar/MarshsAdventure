@@ -17,12 +17,14 @@ public class PauseController : MonoBehaviour, IPointerClickHandler {
 	public Image exitImage;
 	[SerializeField]
 	AudioSource backgroundMusic;
+	private AudioSource[] allAudios;
 
 	public void OnPointerClick(PointerEventData eventData)
 	{
 		//stop background music
-		backgroundMusic = GetComponent<AudioSource>();
-		backgroundMusic.Stop ();
+		//backgroundMusic = GetComponent<AudioSource>();
+		//backgroundMusic.Stop ();
+		StopAudio();
 
 		//When click on pause, set the timeScale of the game to 0 
 		//(all animations stops and the player cannot move anymore)
@@ -37,5 +39,12 @@ public class PauseController : MonoBehaviour, IPointerClickHandler {
 		cloudImage.gameObject.SetActive(true);
 		exitImage.gameObject.SetActive(true);
 
+	}
+
+	private void StopAudio(){
+		allAudios = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+		foreach(AudioSource anAudio in allAudios) {
+			anAudio.Stop();
+		}
 	}
 }
